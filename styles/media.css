@@ -1,0 +1,62 @@
+@media screen and (max-width: 1140px) {
+
+    /* .container {
+        max-width: 375px;
+        padding: 0 30px;
+    } */
+
+    .container {
+        max-width: 700px;
+        padding: 0 30px;
+    }
+
+    /* Header */
+
+    .header-nav>.header-menu {
+        display: none;
+    }
+
+    .header-nav {
+        border-bottom: none;
+    }
+
+    .header-mobile-menu {
+        display: block;
+    }
+
+    .header-row {
+        display: grid;
+        justify-content: center;
+    }
+
+    .header-row-title {
+        display: grid;
+        justify-content: start;
+    }
+
+    .header-row-title>.language {
+        display: none;
+    }
+
+    /* Skills page */
+
+    .skills-list {
+        justify-content: center;
+    }
+
+}
+
+@media screen and (max-width: 700px) {
+
+    .container {
+        max-width: 375px;
+        padding: 0 30px;
+    }
+
+    /* Footer */
+
+    .message-button {
+        width: 100%;
+    }
+
+}
