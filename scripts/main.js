@@ -12,6 +12,6 @@ buttonMenu.addEventListener('click', function () {
 });
 
 AOS.init({
-    disable: 'phone',
+    // disable: 'phone',
     once: true
 });
