@@ -90,7 +90,7 @@ li {
     color: var(---main-font-color);
 }
 
-.header-mobile-menu {
+.header-mobile-btn {
     display: none;
     border: none;
     background: none;
@@ -100,6 +100,8 @@ li {
     right: 0;
 
     cursor: pointer;
+
+    z-index: 1;
 }
 
 
@@ -159,9 +161,9 @@ li {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    
+
     margin-top: 75px;
-    
+
     align-items: baseline;
     column-gap: 60px;
     row-gap: 60px;
@@ -243,4 +245,35 @@ li {
     display: flex;
     justify-content: center;
     gap: 60px;
+}
+
+
+
+/* Mobile menu */
+
+.header-menu-mobile {
+    display: none;
+}
+
+.header-menu-mobile.open {
+    display: flex;
+
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    background-color: #fff;
+    padding-top: 40px;
+}
+
+.header-menu-mobile>.nav-list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+}
+
+.mobileLink {
+    font-size: 34px;
 }

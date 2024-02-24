@@ -12,7 +12,7 @@
 
     /* Header */
 
-    .header-nav>.header-menu {
+    .header-menu {
         display: none;
     }
 
@@ -20,7 +20,7 @@
         border-bottom: none;
     }
 
-    .header-mobile-menu {
+    .header-mobile-btn {
         display: block;
     }
 
@@ -49,7 +49,7 @@
 @media screen and (max-width: 700px) {
 
     .container {
-        max-width: 375px;
+        /* max-width: 375px; */
         padding: 0 30px;
     }
 

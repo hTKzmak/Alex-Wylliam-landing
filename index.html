@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./styles/main.css">
     <link rel="stylesheet" href="./styles/media.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
 </head>
 
 <body>
@@ -18,7 +18,7 @@
             <!-- <div class="header-nav" data-aos="fade-down"> -->
             <div class="header-nav">
                 <nav class="header-menu">
-                    <ul>
+                    <ul class="nav-list">
                         <li><a class="header-link active" href="#!">Home</a></li>
                         <li><a class="header-link not-active" href="#!">About me</a></li>
                         <li><a class="header-link not-active" href="#!">Skills</a></li>
@@ -26,9 +26,26 @@
                         <li><a class="header-link not-active" href="#!">Contacts</a></li>
                     </ul>
                 </nav>
-                <button class="header-mobile-menu">
-                    <img src="./images/menu.svg" alt="menu button">
-                </button>
+
+
+                <div class="mobile-menu">
+                    <button class="header-mobile-btn">
+                        <img id="nav-btn-img" src="./images/menu.svg" alt="menu button">
+                    </button>
+
+                    <nav class="header-menu-mobile">
+                        <ul class="nav-list">
+                            <li><a class="header-link mobileLink active" href="#!">Home</a></li>
+                            <li><a class="header-link mobileLink not-active" href="#!">About me</a></li>
+                            <li><a class="header-link mobileLink not-active" href="#!">Skills</a></li>
+                            <li><a class="header-link mobileLink not-active" href="#!">Portfolio</a></li>
+                            <li><a class="header-link mobileLink not-active" href="#!">Contacts</a></li>
+                        </ul>
+                    </nav>
+
+                </div>
+
+
             </div>
             <div class="header-row" data-aos="fade-up">
                 <div class="header-row-title">
@@ -153,7 +170,7 @@
         </div>
     </footer>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
     <script src="./scripts/main.js"></script>
 </body>
 
