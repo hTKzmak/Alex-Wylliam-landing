@@ -22,20 +22,13 @@
 
     .header-mobile-btn {
         display: block;
+        position: fixed;
+        right: 30px;
     }
 
     .header-row {
         display: grid;
         justify-content: center;
-    }
-
-    .header-row-title {
-        display: grid;
-        justify-content: start;
-    }
-
-    .header-row-title>.language {
-        display: none;
     }
 
     /* Skills page */
@@ -48,25 +41,37 @@
 
     .header-menu-mobile.open {
         display: flex;
-    
+
         position: fixed;
         top: 0;
         bottom: 0;
         left: 0;
         right: 0;
-    
+
         background-color: #fff;
         padding-top: 40px;
     }
-    
+
 
 }
 
 @media screen and (max-width: 700px) {
 
+
+
     .container {
         /* max-width: 375px; */
         padding: 0 30px;
+    }
+
+    /* header row */
+    .header-row-title {
+        display: grid;
+        justify-content: start;
+    }
+
+    .header-row-title>.language {
+        display: none;
     }
 
     /* Footer */
