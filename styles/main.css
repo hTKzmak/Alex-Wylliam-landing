@@ -254,18 +254,8 @@ li {
 .header-menu-mobile {
     display: none;
 }
-
 .header-menu-mobile.open {
-    display: flex;
-
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-
-    background-color: #fff;
-    padding-top: 40px;
+    display: none;
 }
 
 .header-menu-mobile>.nav-list {
