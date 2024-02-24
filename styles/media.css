@@ -1,10 +1,5 @@
 @media screen and (max-width: 1140px) {
 
-    /* .container {
-        max-width: 375px;
-        padding: 0 30px;
-    } */
-
     .container {
         max-width: 700px;
         padding: 0 30px;
@@ -59,10 +54,7 @@
 
 @media screen and (max-width: 700px) {
 
-
-
     .container {
-        /* max-width: 375px; */
         padding: 0 30px;
     }
 
@@ -70,10 +62,19 @@
     .header-row-title {
         display: grid;
         justify-content: start;
+        margin-top: 15px;
     }
 
     .header-row-title>.language {
         display: none;
+    }
+
+    /* Skills page */
+
+    .skills-list {
+        display: grid;
+        justify-content: center;
+        column-gap: 80px;
     }
 
     /* Footer */
@@ -82,4 +83,10 @@
         width: 100%;
     }
 
+}
+
+@media screen and (max-height: 500px) {
+    .header-menu-mobile>.nav-list {
+        row-gap: 0;
+    }
 }

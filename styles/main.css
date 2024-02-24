@@ -129,6 +129,18 @@ li {
     z-index: -1;
 }
 
+.language-mobile {
+    position: absolute;
+    right: 0;
+    bottom: 100px;
+    rotate: 90deg;
+}
+
+.language-mobile>p {
+    color: var(---grey-font-color);
+    font-size: 34px;
+    margin: 0;
+}
 
 /* About page */
 
@@ -249,12 +261,12 @@ li {
 }
 
 
-
 /* Mobile menu */
 
 .header-menu-mobile {
     display: none;
 }
+
 .header-menu-mobile.open {
     display: none;
 }
