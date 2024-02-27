@@ -126,7 +126,7 @@ li {
     font-size: 16px;
     color: var(---grey-font-color);
     rotate: -90deg;
-    z-index: -1;
+    cursor: pointer;
 }
 
 .language-mobile {
@@ -134,6 +134,7 @@ li {
     right: 0;
     bottom: 100px;
     rotate: 90deg;
+    cursor: pointer;
 }
 
 .language-mobile>p {
@@ -264,10 +265,6 @@ li {
 /* Mobile menu */
 
 .header-menu-mobile {
-    display: none;
-}
-
-.header-menu-mobile.open {
     display: none;
 }
 

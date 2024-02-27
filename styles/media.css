@@ -47,6 +47,7 @@
         padding-top: 40px;
 
         z-index: 1;
+        overflow-y: auto;
     }
 
 
@@ -88,5 +89,11 @@
 @media screen and (max-height: 500px) {
     .header-menu-mobile>.nav-list {
         row-gap: 0;
+    }
+}
+
+@media screen and (max-height: 400px) {
+    .language-mobile{
+        bottom: 50px;
     }
 }
