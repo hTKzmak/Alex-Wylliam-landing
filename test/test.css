@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+
+button,
+p {
+    font-family: "Abel", sans-serif;
+    font-size: 18px;
+}
+
+
+.window {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #000000a3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-window {
+    background-color: #F6F6F6;
+    width: 685px;
+    display: grid;
+    justify-content: left;
+    align-items: center;
+    padding: 63px 47px;
+    z-index: 1;
+}
+
+.input-item {
+    margin-top: 27px;
+}
+
+#inputItem {
+    width: 258px;
+    height: 33px;
+    border: 1px solid #000;
+}
+
+.submit {
+    background-color: #000;
+    border-radius: 100px;
+    color: #fff;
+    padding: 10px 48px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 37px;
+}
+
+.btn {
+    border: none;
+    background: none;
+
+    cursor: pointer;
+}

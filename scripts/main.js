@@ -5,9 +5,11 @@ const navBtnImg = document.querySelector('#nav-btn-img');
 buttonMenu.addEventListener('click', function () {
     if(headerMenuMobile.classList.toggle('open')){
         navBtnImg.src = './images/close_menu.svg'
+        document.body.style.overflow = 'hidden'
     } 
     else{
         navBtnImg.src = './images/menu.svg'
+        document.body.style.overflow = 'auto'
     }
 });
 
