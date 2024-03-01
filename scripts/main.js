@@ -23,7 +23,7 @@ btnMessage.addEventListener('click', function() {
             <div class="form-window">
                 <form onclick="event.preventDefault()" class="formMessage">
                     <button class="btn" onclick="contactWindow.classList.remove('open')">
-                        <img id="nav-btn-img" src="../images/close_menu.svg" alt="menu button">
+                        <img id="nav-btn-img" src="./images/close_menu.svg" alt="menu button">
                     </button>
                     <div class="input-item">
                         <p>Your name</p>
