@@ -93,7 +93,7 @@
 }
 
 @media screen and (max-height: 400px) {
-    .language-mobile{
+    .language-mobile {
         bottom: 50px;
     }
 }

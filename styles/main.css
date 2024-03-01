@@ -277,3 +277,68 @@ li {
 .mobileLink {
     font-size: 34px;
 }
+
+
+/* Contact window */
+
+.contact-window {
+    display: none;
+}
+
+.contact-window.open {
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.4);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    pointer-events: all;
+    z-index: 1;
+    padding: 50px;
+}
+
+.form-window {
+    background-color: #F6F6F6;
+    width: 685px;
+    display: grid;
+    justify-content: left;
+    align-items: center;
+    padding: 63px 47px;
+    z-index: 1;
+    position: relative;
+}
+
+.input-item {
+    margin-top: 27px;
+}
+
+#inputItem {
+    width: 258px;
+    height: 33px;
+    border: 1px solid #000;
+}
+
+.submit {
+    background-color: #000;
+    border-radius: 100px;
+    color: #fff;
+    padding: 10px 48px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 37px;
+}
+
+.btn {
+    border: none;
+    background: none;
+
+    cursor: pointer;
+    position: absolute;
+    top: 50px;
+    right: 50px;
+}
