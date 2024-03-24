@@ -16,34 +16,89 @@ buttonMenu.addEventListener('click', function () {
     }
 });
 
-btnMessage.addEventListener('click', function() {
+
+btnMessage.addEventListener('click', function () {
+    if (contactWindow.classList.toggle('open')) {
+        const formWindow = document.createElement('div');
+        formWindow.classList.add('form-window');
+
+        // предотвращение обновления страницы для form
+        const form = document.createElement('form');
+        form.classList.add('formMessage');
+        form.addEventListener('click', function (event) {
+            event.preventDefault();
+        });
+
+
+        // кнопка закрытия окна
+        const closeButton = document.createElement('button');
+        closeButton.classList.add('btn');
+        closeButton.innerHTML = '<img id="nav-btn-img" src="./images/close_menu.svg" alt="menu button">';
+        closeButton.addEventListener('click', function () {
+            contactWindow.classList.remove('open');
+        });
+
+
+        // строки ввода данных
+        const inputItemName = document.createElement('div');
+        inputItemName.classList.add('input-item');
+        inputItemName.innerHTML = '<p>Your name</p><input type="text" id="inputName">';
+        const inputItemEmail = document.createElement('div');
+        inputItemEmail.classList.add('input-item');
+        inputItemEmail.innerHTML = '<p>Your email</p><input type="email" id="inputEmail">';
+        const inputItemPhone = document.createElement('div');
+        inputItemPhone.classList.add('input-item');
+        inputItemPhone.innerHTML = '<p>Your phone</p><input type="tel" id="inputPhone">';
+
+        // добавление кнопки для отправления данных
+        const submitButton = document.createElement('button');
+        submitButton.classList.add('submit');
+        submitButton.textContent = 'Send';
+
+        // отправка данных в консоль и отображение на странице
+        submitButton.addEventListener('click', function () {
+
+            let inputName = document.querySelector('#inputName')
+            let inputEmail = document.querySelector('#inputEmail')
+            let inputPhone = document.querySelector('#inputPhone')
+
+
+            if(inputName.value != '' && inputEmail.value != '' && inputPhone.value != ''){
+                console.log(`Name: ${inputName.value} | Email: ${inputEmail.value}, | Phone: ${inputPhone.value}`);
     
-    if(contactWindow.classList.toggle('open')){
-        contactWindow.innerHTML = `
-            <div class="form-window">
-                <form onclick="event.preventDefault()" class="formMessage">
+                formWindow.innerHTML = `
+                <div class="form-message">
                     <button class="btn" onclick="contactWindow.classList.remove('open')">
-                        <img id="nav-btn-img" src="../images/close_menu.svg" alt="menu button">
+                        <img id="nav-btn-img" src="./images/close_menu.svg" alt="menu button">
                     </button>
-                    <div class="input-item">
-                        <p>Your name</p>
-                        <input type="text" id="inputItem">
-                    </div>
-                    <div class="input-item">
-                        <p>Your email</p>
-                        <input type="text" id="inputItem">
-                    </div>
-                    <div class="input-item">
-                        <p>Your phone</p>
-                        <input type="text" id="inputItem">
-                    </div>
-                    <button class="submit">Send</button>
-                </form>
-            </div>
-        `
+                    <h1>Your reply has been sended</h1>
+                    <h3 style="margin-top: 20px">Your data:</h3>
+                        <ul>
+                            <li>Name: ${inputName.value}</li>
+                            <li>Email: ${inputEmail.value}</li>
+                            <li>Phone: ${inputPhone.value}</li>
+                        </ul>
+                </div>
+                `
+            }
+            else{
+                inputName.style.borderColor = (inputName.value != '') ? '' : '#fc1e1f';
+                inputEmail.style.borderColor = (inputEmail.value != '') ? '' : '#fc1e1f';
+                inputPhone.style.borderColor = (inputPhone.value != '') ? '' : '#fc1e1f';
+            }
+        })
+
+        // добавление:
+        form.appendChild(closeButton);
+        form.appendChild(inputItemName);
+        form.appendChild(inputItemEmail);
+        form.appendChild(inputItemPhone);
+        form.appendChild(submitButton);
+        formWindow.appendChild(form);
+        contactWindow.innerHTML = '';
+        contactWindow.appendChild(formWindow);
     }
 })
-
 
 AOS.init({
     // disable: 'phone',
