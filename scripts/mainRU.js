@@ -48,18 +48,18 @@ btnMessage.addEventListener('click', function () {
         // строки ввода данных
         const inputItemName = document.createElement('div');
         inputItemName.classList.add('input-item');
-        inputItemName.innerHTML = '<p>Your name</p><input type="text" id="inputName">';
+        inputItemName.innerHTML = '<p>Твоё имя</p><input type="text" id="inputName">';
         const inputItemEmail = document.createElement('div');
         inputItemEmail.classList.add('input-item');
-        inputItemEmail.innerHTML = '<p>Your email</p><input type="email" id="inputEmail">';
+        inputItemEmail.innerHTML = '<p>Твоя почта</p><input type="email" id="inputEmail">';
         const inputItemPhone = document.createElement('div');
         inputItemPhone.classList.add('input-item');
-        inputItemPhone.innerHTML = '<p>Your phone</p><input type="tel" id="inputPhone">';
+        inputItemPhone.innerHTML = '<p>Твой телефон</p><input type="tel" id="inputPhone">';
 
         // добавление кнопки для отправления данных
         const submitButton = document.createElement('button');
         submitButton.classList.add('submit');
-        submitButton.textContent = 'Send';
+        submitButton.textContent = 'Отправить';
 
         // отправка данных в консоль и отображение на странице
         submitButton.addEventListener('click', function () {
@@ -69,16 +69,16 @@ btnMessage.addEventListener('click', function () {
             let inputPhone = document.querySelector('#inputPhone')
 
 
-            if (inputName.value != '' && inputEmail.value != '' && inputPhone.value != '') {
+            if(inputName.value != '' && inputEmail.value != '' && inputPhone.value != ''){
                 console.log(`Name: ${inputName.value} | Email: ${inputEmail.value}, | Phone: ${inputPhone.value}`);
-
+    
                 formWindow.innerHTML = `
                 <div class="form-message">
                     <button class="btn" onclick="contactWindow.classList.remove('open')">
                         <img id="nav-btn-img" src="./images/close_menu.svg" alt="menu button">
                     </button>
-                    <h1>Your reply has been sended</h1>
-                    <h3 style="margin-top: 20px">Your data:</h3>
+                    <h1>Твой запрос был отправлен</h1>
+                    <h3 style="margin-top: 20px">Твои данные:</h3>
                         <ul>
                             <li>Name: ${inputName.value}</li>
                             <li>Email: ${inputEmail.value}</li>
@@ -87,7 +87,7 @@ btnMessage.addEventListener('click', function () {
                 </div>
                 `
             }
-            else {
+            else{
                 inputName.style.backgroundColor = (inputName.value != '') ? '' : '#ff535379';
                 inputEmail.style.backgroundColor = (inputEmail.value != '') ? '' : '#ff535379';
                 inputPhone.style.backgroundColor = (inputPhone.value != '') ? '' : '#ff535379';

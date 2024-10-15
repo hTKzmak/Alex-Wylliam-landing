@@ -35,6 +35,10 @@ a {
     font-size: 18px;
 }
 
+a{
+    color: var(---grey-font-color);
+}
+
 button {
     font-family: "Abel", sans-serif;
     font-size: 18px;
@@ -74,19 +78,14 @@ li {
 }
 
 .header-link {
-    /* color: #828282; */
     text-decoration: none;
 }
 
-.active {
-    color: var(---main-font-color);
-}
-
-.not-active {
+.not-active{
     color: var(---grey-font-color);
 }
 
-.header-link:hover {
+.active{
     color: var(---main-font-color);
 }
 
@@ -137,7 +136,7 @@ li {
     cursor: pointer;
 }
 
-.language-mobile>p {
+.language-mobile>a {
     color: var(---grey-font-color);
     font-size: 34px;
     margin: 0;
@@ -266,6 +265,7 @@ li {
 
 .header-menu-mobile {
     display: none;
+    transition: 0.3s;
 }
 
 .header-menu-mobile>.nav-list {
@@ -316,10 +316,15 @@ li {
     margin-top: 27px;
 }
 
+.input-item > input{
+    transition: 0.3s;
+    border: 1px solid #000;
+    outline: none;
+}
+
 #inputItem {
     width: 258px;
     height: 33px;
-    border: 1px solid #000;
 }
 
 .submit {
