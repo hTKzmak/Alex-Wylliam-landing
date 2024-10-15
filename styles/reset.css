@@ -90,3 +90,10 @@ textarea:not([rows]) {
 a {
   text-decoration: none
 }
+
+/* убирает выделение с этих элементов */
+button,
+input, div, form {
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    -webkit-tap-highlight-color: transparent;
+}
